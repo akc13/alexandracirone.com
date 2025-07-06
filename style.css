@@ -1,88 +1,117 @@
-/* This sets a base font and removes default margin/padding for all elements */
+/* A modern reset to remove default styles and set a base font */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif; /* A simple, default font */
+    font-family: 'Helvetica', 'Arial', sans-serif; /* A clean, modern font */
 }
 
-/* This styles the main body of the page */
-body {
-    background-color: #ffffff; /* White background */
-    color: #333333; /* A dark grey for text for readability */
+/* Styles for the whole page */
+html, body {
+    height: 100%; /* Makes the body fill the entire viewport height */
+    background-color: #62C4C8; /* The teal background color */
+    color: white; /* Default text color to white */
+    overflow: hidden; /* Prevents scrollbars from appearing */
 }
 
-/* This styles the header section */
+/* Styles for the header and navigation */
 header {
-    background-color: #62C4C8; /* A light teal for the header */
-    padding: 1rem;
-    color: white;
+    position: absolute; /* Takes the header out of the normal document flow */
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 0; /* Adds some padding on the top and bottom */
 }
 
-/* This styles the navigation bar */
 nav ul {
-    list-style: none; /* Removes the bullet points from the list */
-    display: flex; /* Makes the list items appear in a row */
-    justify-content: center; /* Centers the navigation items */
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Lays out the links in a row */
+    justify-content: center; /* Centers the links horizontally */
+    gap: 2rem; /* Adds space between the navigation items */
 }
 
-/* This styles the navigation links */
-nav ul li a {
-    color: white; /* White text for the links */
-    text-decoration: none; /* Removes the underline from links */
-    padding: 0 1rem; /* Adds some space around the links */
+nav a {
+    color: white;
+    text-decoration: none; /* Removes the underline */
     font-weight: bold;
+    font-size: 0.9rem;
 }
 
-/* This styles the main content area */
+/* Styles for the main content area */
 main {
-    padding: 2rem;
-    min-height: 70vh; /* Ensures the main content takes up a good amount of vertical space */
+    height: 100%;
+    display: flex; /* Uses Flexbox for layout */
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center; /* Centers children vertically */
+    align-items: center; /* Centers children horizontally */
+    text-align: center;
+    padding: 0 1rem; /* Adds some padding on the sides */
 }
 
-/* This styles the hero section on the homepage */
-.hero {
+/* Styles for the big "ALEX CIRONE" text container */
+.hero-text {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2rem; /* Adds space between the image and the text */
-    background-color: #62C4C8; /* Light teal background */
-    padding: 4rem 2rem;
-    border-radius: 10px; /* Rounds the corners */
 }
 
-/* This styles the image placeholder */
-.image-placeholder {
-    width: 200px;
-    height: 200px;
-    background-color: #ffffff; /* White placeholder */
-    border-radius: 50%; /* Makes the placeholder a circle */
-    border: 5px solid white;
+/* Styles for "ALEX" and "CIRONE" */
+.name-part {
+    font-size: 10vw; /* Responsive font size based on viewport width */
+    font-weight: bold;
+    line-height: 1; /* Reduces the space between the lines of text */
+    text-transform: uppercase; /* Makes the text all caps */
 }
 
-/* This styles the main heading within the hero section */
-.hero h1 {
-    color: white; /* White text */
-    font-size: 3rem;
+/* Styles for the horizontal line between the names */
+.separator {
+    border: 0;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    margin: 1.5rem 0; /* Adds space above and below the line */
 }
 
-/* This styles the footer */
-footer {
-    background-color: #f2f2f2; /* A light grey for the footer */
-    text-align: center;
-    padding: 2rem;
+/* Styles for the tagline */
+.tagline {
+    margin-top: 1.5rem; /* Adds space above the tagline */
+    font-size: 1.2rem;
+    font-weight: normal;
 }
 
-/* This styles the container for the social media links */
-.social-links {
-    margin-top: 1rem;
+/* Styles for the vertical social media bar */
+.social-bar {
+    position: fixed; /* Fixes the position relative to the viewport */
+    left: 0; /* Aligns it to the left edge */
+    top: 50%; /* Positions the top of the bar at the vertical center */
+    transform: translateY(-50%); /* Shifts the bar up by half its height to truly center it */
+    background-color: #8A2BE2; /* The same purple as the chat box */
+    padding: 1rem 0.5rem; /* Adds some padding */
+    border-radius: 0 10px 10px 0; /* Rounds the right corners */
+    display: flex;
+    flex-direction: column; /* Stacks the icons vertically */
+    gap: 1.5rem; /* Adds space between the icons */
 }
 
-/* This styles the individual social media links */
-.social-links a {
-    margin: 0 1rem;
-    color: #62C4C8; /* Teal text for the links */
+/* Styles for the icons in the social bar */
+.social-bar a {
+    color: white;
     text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Styles for the purple chat box */
+.chat-box {
+    position: fixed; /* Fixes the position relative to the viewport */
+    bottom: 2rem; /* 2rem from the bottom */
+    right: 2rem; /* 2rem from the right */
+    width: 50px;
+    height: 50px;
+    background-color: #8A2BE2; /* A nice shade of purple (BlueViolet) */
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    font-size: 1.5rem;
     font-weight: bold;
 } 

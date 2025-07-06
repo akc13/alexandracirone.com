@@ -9,19 +9,17 @@
     <!-- This makes the website responsive, so it looks good on different devices like phones and desktops -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- This sets the title of the page, which appears in the browser tab -->
-    <title>Alexandra Cirone - Home</title>
-    <!-- These lines import the 'Amatic SC' font from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <title>Alex Cirone</title>
     <!-- This links the external stylesheet to the HTML file -->
     <link rel="stylesheet" href="style.css">
+    <!-- This links to the Font Awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <!-- End of the head section -->
 </head>
 <!-- This contains the visible content of the HTML document -->
 <body>
 
-    <!-- This is the header section of the page, which usually contains the logo and navigation -->
+    <!-- This is the header section of the page, which contains the navigation -->
     <header>
         <!-- This is the navigation bar -->
         <nav>
@@ -35,35 +33,41 @@
                 <li><a href="projects.html">Projects</a></li>
                 <!-- This is a list item containing a link to the Blog page -->
                 <li><a href="blog.html">Blog</a></li>
-                <!-- This is a list item containing a link to the Get in Touch page -->
-                <li><a href="contact.html">Get in touch</a></li>
+                <!-- This is a list item containing a link to the Contact page -->
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- This is the main content area of the page -->
     <main>
-        <!-- This section is for the main hero/welcome area -->
-        <section class="hero">
-            <!-- This div will contain the placeholder for your image -->
-            <div class="image-placeholder"></div>
-            <!-- This is the main heading for the home page -->
-            <h1>Empowering communities to be changemakers.</h1>
-        </section>
+        <!-- This is the container for the main hero text -->
+        <div class="hero-text">
+            <!-- This is the first part of the name -->
+            <span class="name-part">ALEX</span>
+            <!-- This is the decorative line -->
+            <hr class="separator" />
+            <!-- This is the second part of the name -->
+            <span class="name-part">CIRONE</span>
+        </div>
+        <!-- This is the tagline underneath the name -->
+        <p class="tagline">Unlocking 21st Century Skills & Community Impact</p>
+        
     </main>
 
-    <!-- This is the footer section of the page -->
-    <footer>
-        <!-- This heading is for the social media links section -->
-        <h3>Connect with me</h3>
-        <!-- This div will contain the social media links -->
-        <div class="social-links">
-            <!-- This is a link to your LinkedIn profile (replace '#' with your actual link) -->
-            <a href="#">LinkedIn</a>
-            <!-- This is a link to your Substack page (replace '#' with your actual link) -->
-            <a href="#">Substack</a>
-        </div>
-    </footer>
+    <!-- This is the vertical social media bar -->
+    <div class="social-bar">
+        <!-- This is a link to your LinkedIn profile -->
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <!-- This is a link to your Substack profile, represented by a bookmark icon -->
+        <a href="#"><i class="fas fa-bookmark"></i></a>
+    </div>
+
+    <!-- This is the purple chat box button -->
+    <div class="chat-box">
+        <!-- This could be an icon or text for the chat box -->
+        <span>?</span>
+    </div>
 
 <!-- End of the body section -->
 </body>
