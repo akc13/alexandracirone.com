@@ -1,25 +1,88 @@
-/* This rule applies to both the html and body elements */
-html, body {
-    /* This makes the html and body take up the full height of the viewport */
-    height: 100%;
-    /* This removes the default margin from the body */
+/* This sets a base font and removes default margin/padding for all elements */
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font-family: sans-serif; /* A simple, default font */
 }
-/* This rule applies to the body element */
+
+/* This styles the main body of the page */
 body {
-    /* This enables Flexbox layout for the body's children */
-    display: flex;
-    /* This centers the content horizontally */
-    justify-content: center;
-    /* This centers the content vertically */
-    align-items: center;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* A dark grey for text for readability */
 }
-/* This rule applies to the h1 element */
-h1 {
-    /* This sets the font family to 'Amatic SC' with a fallback to a generic sans-serif font */
-    font-family: 'Amatic SC', sans-serif;
-    /* This sets the font size to 5rem, which is 5 times the root font size */
-    font-size: 5rem;
-    /* This sets the font weight to bold (700 is the numeric value for bold) */
-    font-weight: 700;
+
+/* This styles the header section */
+header {
+    background-color: #62C4C8; /* A light teal for the header */
+    padding: 1rem;
+    color: white;
+}
+
+/* This styles the navigation bar */
+nav ul {
+    list-style: none; /* Removes the bullet points from the list */
+    display: flex; /* Makes the list items appear in a row */
+    justify-content: center; /* Centers the navigation items */
+}
+
+/* This styles the navigation links */
+nav ul li a {
+    color: white; /* White text for the links */
+    text-decoration: none; /* Removes the underline from links */
+    padding: 0 1rem; /* Adds some space around the links */
+    font-weight: bold;
+}
+
+/* This styles the main content area */
+main {
+    padding: 2rem;
+    min-height: 70vh; /* Ensures the main content takes up a good amount of vertical space */
+}
+
+/* This styles the hero section on the homepage */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem; /* Adds space between the image and the text */
+    background-color: #62C4C8; /* Light teal background */
+    padding: 4rem 2rem;
+    border-radius: 10px; /* Rounds the corners */
+}
+
+/* This styles the image placeholder */
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff; /* White placeholder */
+    border-radius: 50%; /* Makes the placeholder a circle */
+    border: 5px solid white;
+}
+
+/* This styles the main heading within the hero section */
+.hero h1 {
+    color: white; /* White text */
+    font-size: 3rem;
+}
+
+/* This styles the footer */
+footer {
+    background-color: #f2f2f2; /* A light grey for the footer */
+    text-align: center;
+    padding: 2rem;
+}
+
+/* This styles the container for the social media links */
+.social-links {
+    margin-top: 1rem;
+}
+
+/* This styles the individual social media links */
+.social-links a {
+    margin: 0 1rem;
+    color: #62C4C8; /* Teal text for the links */
+    text-decoration: none;
+    font-weight: bold;
 } 
