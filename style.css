@@ -1,0 +1,23 @@
+/* This rule applies to both the html and body elements */
+html, body {
+    /* This makes the html and body take up the full height of the viewport */
+    height: 100%;
+    /* This removes the default margin from the body */
+    margin: 0;
+}
+/* This rule applies to the body element */
+body {
+    /* This enables Flexbox layout for the body's children */
+    display: flex;
+    /* This centers the content horizontally */
+    justify-content: center;
+    /* This centers the content vertically */
+    align-items: center;
+}
+/* This rule applies to the h1 element */
+h1 {
+    /* This sets the font family to 'Dancing Script' with a fallback to a generic cursive font */
+    font-family: 'Dancing Script', cursive;
+    /* This sets the font size to 5rem, which is 5 times the root font size */
+    font-size: 5rem;
+} 
