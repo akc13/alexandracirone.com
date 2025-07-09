@@ -16,10 +16,12 @@ html, body {
 
 /* Styles for the header and navigation */
 header {
-    position: absolute; /* Takes the header out of the normal document flow */
+    position: fixed; /* Fixes the header to the top of the page */
     top: 0;
     width: 100%;
     padding: 1.5rem 0; /* Adds some padding on the top and bottom */
+    background-color: #62C4C8; /* The teal background color */
+    z-index: 1000; /* Ensures the header is on top of other content */
 }
 
 nav ul {
@@ -33,7 +35,7 @@ nav a {
     color: white;
     text-decoration: none; /* Removes the underline */
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Increased the font size */
 }
 
 /* Styles for the main content area */
@@ -76,6 +78,53 @@ main {
     margin-top: 1.5rem; /* Adds space above the tagline */
     font-size: 1.2rem;
     font-weight: normal;
+}
+
+/* Styles specific to the About page */
+body.about-page {
+    overflow: auto; /* Allow scrolling on the about page */
+}
+
+/* Adjusts the main container on the About page */
+.about-page main {
+    height: auto;
+    padding: 8rem 2rem 4rem; /* Adds padding to make space for the header */
+    justify-content: flex-start; /* Aligns content to the top */
+}
+
+/* Styles for the content container on the About page */
+.about-container {
+    display: flex;
+    align-items: center; /* Vertically aligns the photo and text */
+    gap: 4rem; /* Increases space between the image and the text */
+    max-width: 1100px; /* Sets a max width for readability */
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Styles for the profile picture on the About page */
+.profile-pic {
+    width: 400px; /* Increased the width of the photo */
+    border-radius: 15px; /* Adds rounded corners */
+}
+
+/* Styles for the text section on the About page */
+.about-text {
+    flex: 1; /* Allows the text to take up the remaining space */
+    text-align: left; /* Aligns the text to the left */
+}
+
+/* Styles for the heading on the About page */
+.about-text h1 {
+    font-size: 3rem; /* Decreased the font size */
+    margin-bottom: 1.5rem; /* Adjusted the margin */
+    line-height: 1.2;
+}
+
+/* Styles for the paragraphs on the About page */
+.about-text p {
+    font-size: 1rem; /* Decreased the font size */
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 /* Styles for the vertical social media bar */
